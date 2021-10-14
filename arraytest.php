@@ -3,41 +3,37 @@
 // Question 1
 
 // $color = [
-//     0 => 'white',
-//     1 => 'green',
-//     2 => 'red',
-//     3 => 'blue',
-//     4 => 'black'
+//     'white',
+//     'green',
+//     'red',
+//     'blue',
+//     'black'
 // ];
 
-// echo 'The memory of that scene for me is like a frame of film forever frozen at that moment:' . 'the' . ' ' . $color[2] . ' ' . 'carpet,' . ' '
-//     . 'the' . ' ' . $color[1] . ' ' . ' lawn,' . ' ' . 'the' . ' ' . $color[0] . ' ' . 'house,' . ' ' . 'the leaden sky.' . ' ' . ' The new president and his first lady. '
-//     . ' ' . '- Richard M. Nixon';
+// echo 'The memory of that scene for me is like a frame of film forever frozen at that moment: the 
+// ' . $color[2] . ' carpet, the ' . $color[1] . ' lawn, the ' . $color[0] . ' house, 
+// the leaden sky. The new president and his first lady. - Richard M. Nixon';
 
 
 
-// // Question 2 
+// Question 2 
 
 // $color = [
-//     'one' => 'green',
-//     'two' => 'red',
-//     'three' => 'white'
+//     'white',
+//     'green',
+//     'red'
 // ];
 
-// echo 'Output:' . '<br>'
-//     . 'green,' . ' ' . 'red,' . ' ' . 'white';
-
-
+// echo '<em>Output:</em>';
+// echo '<br>';
+// echo $color[0] . ', ' . $color[1] . ', '  . $color[2] . ', ';
+// echo '<br>';
 // echo
-// '<ul><li>' . $color['one'] . ' ' . '<li>'  . $color['two'] . ' ' .  '<li>' . $color['three'] . '</li></ul>';
-
-// // foreach ($color as $colors) {
-// //     echo
-// //     '<ul><li>' .$colors['one']  .$colors['two'] . $colors['three'] . '</li></ul>';
-// // }
+// '<ul><li>' . $color[1] . '<li>'  . $color[2] .  '<li>' . $color[0] . '</li></ul>';
 
 
-// //Question 3
+
+//Question 3
 
 // $ceu = [
 //     "Italy" => "Rome",
@@ -74,7 +70,7 @@
 // }
 
 
-// //Question 4
+//Question 4
 
 // $x = [
 //     0 => 1,
@@ -91,7 +87,7 @@
 // echo var_dump($x);
 
 
-// // question 5
+// question 5
 
 // $color = [
 //     4 => 'white',
@@ -102,6 +98,8 @@
 // $colorDisplay = $color[4];
 
 // echo $colorDisplay;
+
+
 
 // Question 6 
 
@@ -154,9 +152,25 @@
 //     echo $x;
 // };
 
-$details = [
-    'Sophia' => '31',
-    'Jacob' => '41',
-    'William' => '39',
-    'Ramesh' => '40',
-];
+// $details = [
+//     'Sophia' => '31',
+//     'Jacob' => '41',
+//     'William' => '39',
+//     'Ramesh' => '40',
+// ];
+// asort($details);
+
+// echo 'Accending Order By Values:' . ' ';
+// foreach ($details as $x) {
+//     echo $x . ' ';
+// };
+
+// echo '<br>';
+// echo '<br>';
+// ksort($details);
+// echo ' Accending order by Key' . ' ';
+// echo '<br>';
+// foreach ($details as $x => $xvalues) {
+//     echo 'Key =' . ' ' . ' ' . $x . ' ' . 'Value =' . ' ' . $xvalues;
+//     echo '<br>';
+// };
