@@ -106,25 +106,22 @@
 
 // Question 6 
 
-// $jsonObject = '{
-// "Title": "The Cuckoos Calling",
-// "Author": "Robert Galbraith",
-// "Detail": {
-// "Publisher": "Little Brown"
-// }
-// }';
+$jsonObject = '{
+"Title": "The Cuckoos Calling",
+"Author": "Robert Galbraith",
+"Detail": {
+"Publisher": "Little Brown"
+}
+}';
 
-// $object = json_decode($jsonObject, true);
-
-// echo 'Title:' . ' ';
-// echo $object['Title'];
-// echo '<br>' . '<br>';
-// echo 'Author:' . ' ';
-// echo $object['Author'];
-// echo '<br>' . '<br>';
-// echo 'Publisher:' .' ';
-// echo $object['Detail']['Publisher'];
-
+$object = json_decode($jsonObject, true);
+echo '<em>Expected Output : </em>';
+echo '<br>';
+echo 'Title : ' . $object['Title'];
+echo '<br>';
+echo 'Author : ' . $object['Author'];
+echo '<br>';
+echo 'Publisher : ' . $object['Detail']['Publisher'];
 
 // Question 7
 
