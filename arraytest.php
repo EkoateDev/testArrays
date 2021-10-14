@@ -72,18 +72,22 @@
 //Question 4
 
 // $x = [
-//     0 => 1,
-//     1 => 2,
-//     2 => 3,
-//     3 => 4,
-//     4 => 5,
+//     1,
+//     2,
+//     3,
+//     4,
+//     5
 // ];
 
-// echo var_dump($x) . '<br>';
-// unset($x[3]);
-// $x = array_values($x);
+// echo '<em> Sample Output : </em>';
 // echo '<br>';
 // echo var_dump($x);
+// echo '<br>';
+// unset($x[3]);
+
+// $xValues = array_values($x);
+// echo '<br>';
+// echo var_dump($xValues);
 
 
 // question 5
@@ -96,7 +100,7 @@
 
 // $colorDisplay = $color[4];
 
-// echo $colorDisplay;
+// echo '<em> Expected result : </em>' . $colorDisplay;
 
 
 
