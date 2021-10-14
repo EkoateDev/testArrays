@@ -28,8 +28,7 @@
 // echo '<br>';
 // echo $color[0] . ', ' . $color[1] . ', '  . $color[2] . ', ';
 // echo '<br>';
-// echo
-// '<ul><li>' . $color[1] . '<li>'  . $color[2] .  '<li>' . $color[0] . '</li></ul>';
+// echo '<ul><li>' . $color[1] . '<li>'  . $color[2] .  '<li>' . $color[0] . '</li></ul>';
 
 
 
@@ -65,7 +64,7 @@
 // asort($ceu);
 
 // foreach ($ceu as $country => $capital) {
-//     echo 'The capital of' . ' ' . $country . ' ' . 'is' . ' ' . $capital;
+//     echo 'The capital of ' . $country .  ' is ' . $capital;
 //     echo '<br>';
 // }
 
