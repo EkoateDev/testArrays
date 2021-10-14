@@ -164,18 +164,42 @@
 //     'Ramesh' => '40',
 // ];
 // asort($details);
-
-// echo 'Accending Order By Values:' . ' ';
-// foreach ($details as $x) {
-//     echo $x . ' ';
-// };
-
-// echo '<br>';
-// echo '<br>';
-// ksort($details);
-// echo ' Accending order by Key' . ' ';
+// echo 'Accending Order By Values : ';
 // echo '<br>';
 // foreach ($details as $x => $xvalues) {
-//     echo 'Key =' . ' ' . ' ' . $x . ' ' . 'Value =' . ' ' . $xvalues;
+//     echo $x . ' => '  . $xvalues . ' ';
+// };
+
+// echo '<br>';
+// echo '<br>';
+
+// ksort($details);
+// echo ' Accending order by Key : ' . ' ';
+// echo '<br>';
+// foreach ($details as $x => $xvalues) {
+//     echo 'Key = ' . $x . ' , ' . 'Value = ' . $xvalues;
 //     echo '<br>';
 // };
+
+// echo '<br>';
+// echo '<br>';
+
+// arsort($details);
+// echo ' Descending order by Value : ' . ' ';
+// echo '<br>';
+// foreach ($details as $x => $xvalues) {
+//     echo 'Key = ' . $x . ' , ' . 'Value = ' . $xvalues;
+//     echo '<br>';
+// };
+
+// echo '<br>';
+// echo '<br>';
+
+// krsort($details);
+// echo ' Descending order by Key : ' . ' ';
+// echo '<br>';
+// foreach ($details as $x => $xvalues) {
+//     echo 'Key = ' . $x . ' , ' . 'Value = ' . $xvalues;
+//     echo '<br>';
+// };
+
