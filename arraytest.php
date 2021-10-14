@@ -106,22 +106,22 @@
 
 // Question 6 
 
-$jsonObject = '{
-"Title": "The Cuckoos Calling",
-"Author": "Robert Galbraith",
-"Detail": {
-"Publisher": "Little Brown"
-}
-}';
+// $jsonObject = '{
+// "Title": "The Cuckoos Calling",
+// "Author": "Robert Galbraith",
+// "Detail": {
+// "Publisher": "Little Brown"
+// }
+// }';
 
-$object = json_decode($jsonObject, true);
-echo '<em>Expected Output : </em>';
-echo '<br>';
-echo 'Title : ' . $object['Title'];
-echo '<br>';
-echo 'Author : ' . $object['Author'];
-echo '<br>';
-echo 'Publisher : ' . $object['Detail']['Publisher'];
+// $object = json_decode($jsonObject, true);
+// echo '<em> Expected Output : </em>';
+// echo '<br>';
+// echo 'Title : ' . $object['Title'];
+// echo '<br>';
+// echo 'Author : ' . $object['Author'];
+// echo '<br>';
+// echo 'Publisher : ' . $object['Detail']['Publisher'];
 
 // Question 7
 
@@ -133,7 +133,9 @@ echo 'Publisher : ' . $object['Detail']['Publisher'];
 //     5
 // ];
 
-// echo 'Original array:';
+// echo '<em> Expected Output : </em>';
+// echo '<br>';
+// echo 'Original array :';
 // echo '<br>';
 // foreach ($originalArray as $x) {
 //     echo $x;
@@ -144,6 +146,7 @@ echo 'Publisher : ' . $object['Detail']['Publisher'];
 // $position = 3;
 
 // array_splice($originalArray, $position, 0, $newValue);
+
 // echo '<br>';
 // echo '<br>';
 // echo 'After inserting "$" the array is :';
@@ -152,6 +155,8 @@ echo 'Publisher : ' . $object['Detail']['Publisher'];
 //     echo $x;
 // };
 
+
+// Question 8
 // $details = [
 //     'Sophia' => '31',
 //     'Jacob' => '41',
