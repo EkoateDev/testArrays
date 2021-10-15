@@ -203,35 +203,62 @@
 //     echo '<br>';
 // }
 
-$recordedTemperatures = '78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73';
+// $recordedTemperatures = '78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73';
 
-$temperatureArray = explode(',', $recordedTemperatures);
+// $temperatureArray = explode(',', $recordedTemperatures);
 
-$totalTemperature = array_sum($temperatureArray);
+// $totalTemperature = array_sum($temperatureArray);
 
-$temperatureArrayLength = count($temperatureArray);
+// $temperatureArrayLength = count($temperatureArray);
 
-echo '<em> Expected Output :</em>';
-echo '<br>';
+// echo '<em> Expected Output :</em>';
+// echo '<br>';
 
-foreach ($temperatureArray as $temp) {
-    $temp =  $totalTemperature / $temperatureArrayLength;
+// foreach ($temperatureArray as $temp) {
+//     $temp =  $totalTemperature / $temperatureArrayLength;
+// }
+// echo 'Average Temperature is : ' . $temp;
+
+// echo '<br>';
+// echo '<br>';
+
+// sort($temperatureArray);
+// echo 'List of Seven lowest temperatures : ';
+// for ($x = 0; $x < 7; $x++) {
+//     echo $temperatureArray[$x];
+// }
+
+// echo '<br>';
+// echo '<br>';
+
+// echo 'List of Seven Highest temperatures : ';
+// for ($x = ($temperatureArrayLength - 7); $x < ($temperatureArrayLength); $x++) {
+//     echo $temperatureArray[$x];
+// }
+
+
+// Question 10 
+
+function displayValues($inputArray)
+{
+    $x = $inputArray;
+
+    if (count($x) == 0)
+        return array();
+
+    elseif (count($x) == 1)
+        return array_chunk($x[0], 1);
+
+    array_unshift($inputArray, NULL);
+
+    $valueSorting = call_user_func_array('array_map', $inputArray);
+    return array_map('array_filter', $valueSorting);
 }
-echo 'Average Temperature is : ' . $temp;
-
-echo '<br>';
-echo '<br>';
-
-sort($temperatureArray);
-echo 'List of Seven lowest temperatures : ';
-for ($x = 0; $x < 7; $x++) {
-    echo $temperatureArray[$x];
+function bead_sort($inputArray)
+{
+    foreach ($inputArray as $i) {
+        $positiveValues[] = array_fill(0, $i, 1);
+    }
 }
 
-echo '<br>';
-echo '<br>';
-
-echo 'List of Seven Highest temperatures : ';
-for ($x = ($temperatureArrayLength - 7); $x < ($temperatureArrayLength); $x++) {
-    echo $temperatureArray[$x];
-}
+// $inputArray = [5, 3, 1, 3, 8, 7, 4, 1, 1, 3];
