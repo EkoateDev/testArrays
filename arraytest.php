@@ -256,9 +256,15 @@ function displayValues($inputArray)
 }
 function bead_sort($inputArray)
 {
-    foreach ($inputArray as $i) {
+    foreach ($inputArray as $i)
         $positiveValues[] = array_fill(0, $i, 1);
-    }
+    return array_map('count', displayValues(displayValues($positiveValues)));
 }
 
-// $inputArray = [5, 3, 1, 3, 8, 7, 4, 1, 1, 3];
+echo '<em>Input Array : </em>';
+print_r(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3));
+echo '<br>';
+echo '<em> Expected Result : </em>';
+print_r(bead_sort(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3)));
+
+
