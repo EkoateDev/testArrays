@@ -239,32 +239,60 @@
 
 // Question 10 
 
-function displayValues($inputArray)
+// function displayValues($inputArray)
+// {
+//     $x = $inputArray;
+
+//     if (count($x) == 0)
+//         return array();
+
+//     elseif (count($x) == 1)
+//         return array_chunk($x, 1);
+
+//     array_unshift($inputArray, NULL);
+
+//     $valueSorting = call_user_func_array('array_map', $inputArray);
+//     return array_map('array_filter', $valueSorting);
+// }
+// function bead_sort($inputArray)
+// {
+//     foreach ($inputArray as $i)
+//         $positiveValues[] = array_fill(0, $i, 1);
+//     return array_map('count', displayValues(displayValues($positiveValues)));
+// }
+
+// echo '<em>Input Array : </em>';
+// print_r(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3));
+// echo '<br>';
+// echo '<em> Expected Result : </em>';
+// print_r(bead_sort(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3)));
+
+
+// Question 11
+
+
+$arrayOne = [
+    array(77, 87), 
+    array(23, 45)
+];
+
+$arrayTwo = [
+    'w3resource', 
+    'com'
+];
+
+function mergeByIndex($value1, $value2)
 {
-    $x = $inputArray;
-
-    if (count($x) == 0)
-        return array();
-
-    elseif (count($x) == 1)
-        return array_chunk($x[0], 1);
-
-    array_unshift($inputArray, NULL);
-
-    $valueSorting = call_user_func_array('array_map', $inputArray);
-    return array_map('array_filter', $valueSorting);
+    $result = array();
+    $result[] = $value1;
+    if (is_scalar($value2)) {
+        $result[] = $value2;
+    } else {
+        foreach ($value2 as $x => $y) {
+            $result[] = $y;
+        }
+    }
+    return $result;
 }
-function bead_sort($inputArray)
-{
-    foreach ($inputArray as $i)
-        $positiveValues[] = array_fill(0, $i, 1);
-    return array_map('count', displayValues(displayValues($positiveValues)));
-}
-
-echo '<em>Input Array : </em>';
-print_r(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3));
-echo '<br>';
-echo '<em> Expected Result : </em>';
-print_r(bead_sort(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3)));
-
-
+echo '<pre>';
+print_r(array_map('mergeByIndex', $arrayTwo, $arrayOne));
