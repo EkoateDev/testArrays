@@ -270,29 +270,72 @@
 
 // Question 11
 
+// $arrayOne = [
+//     array(77, 87), 
+//     array(23, 45)
+// ];
 
-$arrayOne = [
-    array(77, 87), 
-    array(23, 45)
-];
+// $arrayTwo = [
+//     'w3resource', 
+//     'com'
+// ];
 
-$arrayTwo = [
-    'w3resource', 
-    'com'
-];
+// function mergeByIndex($value1, $value2)
+// {
+//     $result = array();
+//     $result[] = $value1;
+//     if (is_scalar($value2)) {
+//         $result[] = $value2;
+//     } else {
+//         foreach ($value2 as $x => $y) {
+//             $result[] = $y;
+//         }
+//     }
+//     return $result;
+// }
+// echo '<pre>';
+// print_r(array_map('mergeByIndex', $arrayTwo, $arrayOne));
 
-function mergeByIndex($value1, $value2)
+
+// Question 12
+
+function arrayChange($input, $userCase)
 {
-    $result = array();
-    $result[] = $value1;
-    if (is_scalar($value2)) {
-        $result[] = $value2;
-    } else {
-        foreach ($value2 as $x => $y) {
-            $result[] = $y;
-        }
+    $cases = $userCase;
+    $defaultArray = array();
+
+    if (!is_array($input)) {
+        return $defaultArray;
     }
-    return $result;
+    foreach ($input as $key => $value) {
+        if (is_array($value)) {
+            $defaultArray[$key] = arrayChange($value, $cases);
+            continue;
+        }
+        $defaultArray[$key] = ($cases == CASE_UPPER ? strtoupper($value) : strtolower($value));
+    }
+    return $defaultArray;
 }
-echo '<pre>';
-print_r(array_map('mergeByIndex', $arrayTwo, $arrayOne));
+
+$color = [
+    'A' => 'Blue',
+    'B' => 'Green',
+    'c' => 'Red'
+];
+
+echo '<em> Expected Output : </em>';
+echo '<br>';
+
+echo 'Values are in lower case. ';
+echo '<br>';
+$newCase = arrayChange($color, CASE_LOWER);
+print_r($newCase);
+echo '<br>';
+
+echo 'Values are in upper case. ';
+echo '<br>';
+$newCase = arrayChange($color, CASE_UPPER);
+print_r($newCase);
+
+
+// Question 13 
