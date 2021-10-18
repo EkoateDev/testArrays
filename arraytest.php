@@ -299,43 +299,114 @@
 
 // Question 12
 
-function arrayChange($input, $userCase)
-{
-    $cases = $userCase;
-    $defaultArray = array();
+// function arrayChange($input, $userCase)
+// {
+//     $cases = $userCase;
+//     $defaultArray = array();
 
-    if (!is_array($input)) {
-        return $defaultArray;
-    }
-    foreach ($input as $key => $value) {
-        if (is_array($value)) {
-            $defaultArray[$key] = arrayChange($value, $cases);
-            continue;
-        }
-        $defaultArray[$key] = ($cases == CASE_UPPER ? strtoupper($value) : strtolower($value));
-    }
-    return $defaultArray;
-}
+//     if (!is_array($input)) {
+//         return $defaultArray;
+//     }
+//     foreach ($input as $key => $value) {
+//         if (is_array($value)) {
+//             $defaultArray[$key] = arrayChange($value, $cases);
+//             continue;
+//         }
+//         $defaultArray[$key] = ($cases == CASE_UPPER ? strtoupper($value) : strtolower($value));
+//     }
+//     return $defaultArray;
+// }
 
-$color = [
-    'A' => 'Blue',
-    'B' => 'Green',
-    'c' => 'Red'
-];
+// $color = [
+//     'A' => 'Blue',
+//     'B' => 'Green',
+//     'c' => 'Red'
+// ];
 
-echo '<em> Expected Output : </em>';
-echo '<br>';
+// echo '<em> Expected Output : </em>';
+// echo '<br>';
 
-echo 'Values are in lower case. ';
-echo '<br>';
-$newCase = arrayChange($color, CASE_LOWER);
-print_r($newCase);
-echo '<br>';
+// echo 'Values are in lower case. ';
+// echo '<br>';
+// $newCase = arrayChange($color, CASE_LOWER);
+// print_r($newCase);
+// echo '<br>';
 
-echo 'Values are in upper case. ';
-echo '<br>';
-$newCase = arrayChange($color, CASE_UPPER);
-print_r($newCase);
+// echo 'Values are in upper case. ';
+// echo '<br>';
+// $newCase = arrayChange($color, CASE_UPPER);
+// print_r($newCase);
 
 
 // Question 13 
+
+// echo implode(',', range(200,250,4));
+// echo '<br>';
+
+// Question 14 
+
+// $defaultArray = ['abcd','abc','de','hjjj','g','wer'];
+
+// $newArray = array_map('strlen', $defaultArray);
+
+// echo '<em>Expected Output : </em>';
+// echo 'The shortest array length is '.min($newArray) .'.'
+// . ' The longest array length is ' .max($newArray) .'.';
+
+// Question 15 
+
+// $randomNumbers = range(11, 20);
+// shuffle($randomNumbers);
+
+// echo '<em> Sample Range : (11, 20)</em>';
+// echo '<br>';
+// echo '<em>Sample Output : </em>';
+
+// for ($i = 0; $i < 10; $i++) {
+//     echo $randomNumbers[$i] . ' ';
+// }
+
+
+// Question 16 
+
+// $ceu = [
+//     "Italy" => "Rome",
+//     "Luxembourg" => "Luxembourg",
+//     "Belgium" => "Brussels",
+//     "Denmark" => "Copenhagen",
+//     "Finland" => "Helsinki",
+//     "France" => "Paris",
+//     "Slovakia" => "Bratislava",
+//     "Slovenia" => "Ljubljana",
+//     "Germany" => "Berlin",
+//     "Greece" => "Athens",
+//     "Ireland" => "Dublin",
+//     "Netherlands" => "Amsterdam",
+//     "Portugal" => "Lisbon",
+//     "Spain" => "Madrid",
+//     "Sweden" => "Stockholm",
+//     "United Kingdom" => "London",
+//     "Cyprus" => "Nicosia",
+//     "Lithuania" => "Vilnius",
+//     "Czech Republic" => "Prague",
+//     "Estonia" => "Tallin",
+//     "Hungary" => "Budapest",
+//     "Latvia" => "Riga",
+//     "Malta" => "Valetta",
+//     "Austria" => "Vienna",
+//     "Poland" => "Warsaw"
+// ];
+
+// $maxArrayKey = max(array_keys ($ceu));
+
+// echo 'The Highest Array Key is ' . $maxArrayKey;
+
+
+// Question 17 
+
+function minValue(array $values)
+{
+    return min(array_diff(array_map('intval', $values), array(0)));
+}
+
+print_r(minValue(array(-1, -1, 0, 1, 12, -100, 1)));
