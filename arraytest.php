@@ -404,9 +404,33 @@
 
 // Question 17 
 
-function minValue(array $values)
-{
-    return min(array_diff(array_map('intval', $values), array(0)));
-}
+// function minValue(array $values)
+// {
+//     return min(array_diff(array_map('intval', $values), array(0)));
+// }
 
-print_r(minValue(array(-1, -1, 0, 1, 12, -100, 1)));
+// print_r(minValue(array(-1, -1, 0, 1, 12, -100, 1)));
+
+
+// Question 18 
+
+// function decimalNumbers($number, $precision, $separator)
+// {
+//     $accurateNum = explode($separator, $number);
+//     $accurateNum[1] = substr_replace($accurateNum[1], $separator, $precision, 0);
+//     if ($accurateNum[0] >= 0) {
+//         $accurateNum[1] = floor($accurateNum[1]);
+//     } else {
+//         $accurateNum[1] = ceil($accurateNum[1]);
+//     }
+//     $ceilNumber = array($accurateNum[0], $accurateNum[1]);
+//     return implode($separator, $ceilNumber);
+// }
+// echo '<em> Expected Output : </em>';
+// echo '<br>';
+
+// print_r(decimalNumbers(1.155, 2, "."));
+// echo '<br>';
+// print_r(decimalNumbers(100.25781, 4, "."));
+// echo '<br>';
+// print_r(decimalNumbers(-2.9636, 3, "."));
