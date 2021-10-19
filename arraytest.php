@@ -434,3 +434,25 @@
 // print_r(decimalNumbers(100.25781, 4, "."));
 // echo '<br>';
 // print_r(decimalNumbers(-2.9636, 3, "."));
+
+
+// Question 19
+
+// $color = [
+//     'color' =>
+//     array(
+//         'a' => 'Red',
+//         'b' => 'Green',
+//         'c' => 'White'
+//     ),
+//     'numbers' => array(
+//         1, 2, 3, 4, 5, 6
+//     ),
+//     'holes' => array('First', 5 => 'Second', 'Third')
+// ];
+
+// echo $color['holes'][5];
+// echo '<br>';
+// echo $color['color']['a'];
+
+// Question 20
