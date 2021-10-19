@@ -609,15 +609,15 @@
 
 // Question 24 
 
-$soccerBoot = [
-    'Adidas 1',
-    'Adidas 20',
-    'Adidas 3',
-    'Adidas 4'
-];
+// $soccerBoot = [
+//     'Adidas 1',
+//     'Adidas 20',
+//     'Adidas 3',
+//     'Adidas 4'
+// ];
 
-sort($soccerBoot, SORT_NATURAL | SORT_FLAG_CASE);
-foreach ($soccerBoot as $key => $value) {
-    echo 'soccerBoots[' . $key . '] = ' . $value;
-    echo '<br>';
-}
+// sort($soccerBoot, SORT_NATURAL | SORT_FLAG_CASE);
+// foreach ($soccerBoot as $key => $value) {
+//     echo 'soccerBoots[' . $key . '] = ' . $value;
+//     echo '<br>';
+// }
