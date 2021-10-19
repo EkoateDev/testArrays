@@ -548,7 +548,7 @@
 //     $limiting = $timestamp - $limit;
 //     return date('Y,M,D', mktime(0, 0, $limiting));
 // }
-// //The Comparison function 
+// // //The Comparison function 
 // function comparison($valueA, $valueB)
 // {
 //     $x = convertTimeStamp($valueA['page_id']);
@@ -562,10 +562,10 @@
 // //sort array 
 // usort($pages, 'comparison');
 
-// //printing the sorted Page id and username 
+// // //printing the sorted Page id and username 
 
 // foreach ($pages as $key => $value) {
-//     // echo $pages[$key];
+//     echo $key;
 //     echo $value['page_id'];
 //     echo ' user_name: ';
 //     echo $value['user_name'] . ' , ';
@@ -605,3 +605,19 @@
 // $driver[2]['country'] = 'India';
 
 // print_r(columnFilter($driver, 'name'));
+
+
+// Question 24 
+
+$soccerBoot = [
+    'Adidas 1',
+    'Adidas 20',
+    'Adidas 3',
+    'Adidas 4'
+];
+
+sort($soccerBoot, SORT_NATURAL | SORT_FLAG_CASE);
+foreach ($soccerBoot as $key => $value) {
+    echo 'soccerBoots[' . $key . '] = ' . $value;
+    echo '<br>';
+}
