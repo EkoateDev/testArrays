@@ -456,3 +456,113 @@
 // echo $color['color']['a'];
 
 // Question 20
+
+// function arraySort($val1, $val2)
+// {
+//     global $structure;
+
+//     foreach ($structure as $i => $z) {
+//         if ($val1 == $z) {
+//             return 0;
+//             break;
+//         }
+
+//         if ($val2 == $z) {
+//             return 1;
+//             break;
+//         }
+//     }
+// }
+
+// $structure[0] = 1;
+// $structure[1] = 3;
+// $structure[2] = 4;
+// $structure[3] = 2;
+
+// $priority[0] = 2;
+// $priority[1] = 1;
+// $priority[2] = 3;
+// $priority[3] = 4;
+// $priority[4] = 2;
+// $priority[5] = 1;
+// $priority[6] = 2;
+
+// usort($priority, 'arraySort');
+// echo '<br>';
+// print_r($priority);
+
+
+// Question 21
+
+// function subnetSort($a, $b)
+// {
+//     $arrayA = explode('.', $a);
+//     $arrayB = explode('.', $b);
+
+//     foreach (range(0, 3) as $x) {
+//         if ($arrayA[$x] < $arrayB[$x]) {
+//             return -1;
+//         } elseif ($arrayA[$x] > $arrayB[$x]) {
+//             return 1;
+//         }
+//     }
+//     return -1;
+// }
+
+// $subnets = [
+//     '192.169.12',
+//     '192.167.11',
+//     '192.169.14',
+//     '192.168.13',
+//     '192.167.12',
+//     '122.169.15',
+//     '192.167.20'
+// ];
+
+// usort($subnets, 'subnetSort');
+// print_r($subnets);
+
+
+
+// Question 22
+
+
+$pages[0]['page_id'] = "2025731470";
+$pages[1]['page_id'] = "2025731450";
+$pages[2]['page_id'] = "1025731456";
+$pages[3]['page_id'] = "1025731460";
+
+$pages[0]['user_name'] = 'Neko';
+$pages[1]['user_name'] = 'Meek';
+$pages[2]['user_name'] = 'Santan';
+$pages[3]['user_name'] = 'Oxlade';
+
+//converting timestamp to date here 
+function convertTimeStamp($timestamp)
+{
+    $limit = date('U');
+    $limiting = $timestamp - $limit;
+    return date("Ymd", mktime(0, 0, $limiting));
+}
+//The Comparison function 
+function cmp($valueA, $valueB)
+{
+    $l = convertTimeStamp($valueA['page_id']);
+    $k = convertTimeStamp($valueB['page_id']);
+    if ($k == $l) {
+        return strcmp($valueA['user_name'], $valueB['user_name']);
+    } else {
+        return strcmp($k, $l);
+    }
+}
+//sort array 
+usort($arra, "cmp");
+
+//printing the sorted Page id and username 
+while (list($key, $value) = each($arra)) {
+    echo "\$arra[$key]: ";
+    echo $value["transaction_id"];
+    echo " user_name: ";
+    echo $value["user_name"];
+    echo "\n";
+}
