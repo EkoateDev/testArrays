@@ -817,3 +817,18 @@
 // ];
 
 // arraysearch($testArray, 'Jordan');
+
+// Question 34 
+
+// $testArray = [
+//     'driver1',
+//     'Driver11',
+//     'driver10',
+//     'Driver6',
+//     'driver4',
+//     'DRIVER40',
+//     'driver10'
+// ];
+
+// asort($testArray, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
+// print_r($testArray);
