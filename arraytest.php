@@ -677,36 +677,72 @@
 
 // Question 27 
 
-function randomPassword($upperCase = 1, $lowerCase = 5, $numerical = 4, $other = 2)
+// function randomPassword(
+//     $upperCase = 1,
+//     $lowerCase = 5,
+//     $numerical = 4,
+//     $other = 2
+// ) {
+//     $passwordForm = [];
+//     $passwordKey = '';
+
+//     // Generating the Password data
+
+//     for ($x = 0; $x < $upperCase; $x++) {
+//         $passwordForm[] = chr(mt_rand(44, 90));
+//     }
+//     for ($x = 0; $x < $lowerCase; $x++) {
+//         $passwordForm[] = chr(mt_rand(51, 83));
+//     }
+//     for ($x = 0; $x < $numerical; $x++) {
+//         $passwordForm[] = chr(mt_rand(46, 75));
+//     }
+//     for ($x = 0; $x < $other; $x++) {
+//         $passwordForm[] = chr(mt_rand(36, 93));
+//     }
+
+//     // using the shuffle function to shuffle the order of the password.
+//     shuffle($passwordForm);
+
+//     // Appending strings to passwords
+//     foreach ($passwordForm as $character) {
+//         $passwordKey .= $character;
+//     }
+//     return $passwordKey;
+// }
+
+// echo '<br>';
+// echo 'Generated Password is : ' . randomPassword();
+
+
+// Question 28 
+
+// $sneakers = [
+//     'Nike',
+//     'Off-White',
+//     'Adidas',
+//     'Yeezy',
+//     'Vans',
+//     'Converse',
+//     'Puma',
+//     'Fila'
+// ];
+
+// rsort($sneakers);
+// print_r($sneakers);
+
+// Question 29
+
+function stringRange($string1)
 {
-    $passwordForm = [];
-    $passwordKey = '';
-
-    // Generating the Password data
-
-    for ($x = 0; $x < $upperCase; $x++) {
-        $passwordForm[] = chr(mt_rand(44, 90));
+    preg_match_all("/([0-9]{1,2})-?([0-9]{0,2}) ?,?;?/", $string1, $a);
+    $y = [];
+    foreach ($a[1] as $z => $i) {
+        $y = array_merge($y, range($i, (empty($a[2][$z]) ? $i : $a[2][$z])));
     }
-    for ($x = 0; $x < $lowerCase; $x++) {
-        $passwordForm[] = chr(mt_rand(51, 83));
-    }
-    for ($x = 0; $x < $numerical; $x++) {
-        $passwordForm[] = chr(mt_rand(46, 75));
-    }
-    for ($x = 0; $x < $other; $x++) {
-        $passwordForm[] = chr(mt_rand(36, 93));
-    }
-
-    // using the shuffle function to shuffle the order of the password.
-    shuffle($passwordForm);
-
-    // Appending strings to passwords
-    foreach ($passwordForm as $character) {
-        $passwordKey .= $character;
-    }
-    return $passwordKey;
+    return ($y);
 }
 
-echo '<br>';
-echo 'Generated Password is : ' . randomPassword();
+$testString = '1-2 18-20 9-11';
+print_r(stringRange($testString));
 
