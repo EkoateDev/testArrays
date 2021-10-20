@@ -685,16 +685,16 @@ function randomPassword($upperCase = 1, $lowerCase = 5, $numerical = 4, $other =
     // Generating the Password data
 
     for ($x = 0; $x < $upperCase; $x++) {
-        $passwordForm[] = chr(rand(44, 90));
+        $passwordForm[] = chr(mt_rand(44, 90));
     }
     for ($x = 0; $x < $lowerCase; $x++) {
-        $passwordForm[] = chr(rand(51, 83));
+        $passwordForm[] = chr(mt_rand(51, 83));
     }
     for ($x = 0; $x < $numerical; $x++) {
-        $passwordForm[] = chr(rand(46, 75));
+        $passwordForm[] = chr(mt_rand(46, 75));
     }
     for ($x = 0; $x < $other; $x++) {
-        $passwordForm[] = chr(rand(36, 93));
+        $passwordForm[] = chr(mt_rand(36, 93));
     }
 
     // using the shuffle function to shuffle the order of the password.
