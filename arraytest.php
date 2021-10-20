@@ -645,21 +645,22 @@
 
 
 
-function shuffle_assoc($my_array)
+// QUestion 26
+
+function shuffleArray($testArray)
 {
-    $keys = array_keys($my_array);
+    $initialKeys = array_keys($testArray);
 
-    shuffle($keys);
+    shuffle($initialKeys);
 
-    foreach ($keys as $key) {
-        $new[$key] = $my_array[$key];
+    foreach ($initialKeys as $val) {
+        $new[$val] = $testArray[$val];
     }
 
-    $my_array = $new;
+    $testArray = $new;
 
-    return $my_array;
+    return $testArray;
 }
 
-$colors = array("color1" => "Red", "color2" => "Green", "color3" => "Yellow");
-
-print_r(shuffle_assoc($colors));
+$shoeBrands = ['Nike', 'OffWhite', 'Adidas', 'Yeezy', 'Vans', 'Converse', 'Puma', 'Fila'];
+print_r(shuffleArray($shoeBrands));
