@@ -768,16 +768,30 @@
 
 // Question 31 
 
+// $highestValues = [
+//     'value One' => 3021,
+//     'value Two' => 2365,
+//     'value Three' => 5215,
+//     'value Four' => 5214,
+//     'value Five' => 2145
+// ];
+
+// arsort($highestValues);
+// $maxKey = key($highestValues);
+// echo 'The Index of the highest is : ' . $maxKey;
 
 
-$x = array(
-    'value1' => 3021,
-    'value2' => 2365,
-    'value3' => 5215,
-    'value4' => 5214,
-    'value5' => 2145
-);
-reset($x);   // optional.
-arsort($x);
-$key_of_max = key($x);
-echo "Index of the highest value : " . $key_of_max . "\n";
+// Question 32 
+
+function fileExtension($data)
+{
+    $data = implode(
+        '',
+        explode('\\', $data)
+    );
+    $data = explode('.', $data);
+    $data = strtolower(end($data));
+    return $data;
+}
+$file = 'practice.rar';
+echo fileExtension($file);
