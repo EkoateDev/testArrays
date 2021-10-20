@@ -621,3 +621,45 @@
 //     echo 'soccerBoots[' . $key . '] = ' . $value;
 //     echo '<br>';
 // }
+
+// Question 25 
+
+// function entitySort($defaultArray)
+// {
+//     $total = count($defaultArray);
+//     for ($x = 0; $x < $total; $x++) {
+//         if ($defaultArray[$x][0] == ['&']) {
+//             $defaultArray[$x] = $defaultArray[$x][1] . $defaultArray[$x];
+//         } else {
+//             $defaultArray[$x] = $defaultArray[$x][0] . $defaultArray[$x];
+//         }
+//     }
+//     sort($defaultArray);
+//     for ($y = 0; $y < $total; $y++) {
+//         $defaultArray[$y] = substr($defaultArray[$y], 1);
+//     }
+//     return $defaultArray;
+// }
+// $entityArray = [' ', '&', '<' , '®'];
+// print_r(entitySort($entityArray));
+
+
+
+function shuffle_assoc($my_array)
+{
+    $keys = array_keys($my_array);
+
+    shuffle($keys);
+
+    foreach ($keys as $key) {
+        $new[$key] = $my_array[$key];
+    }
+
+    $my_array = $new;
+
+    return $my_array;
+}
+
+$colors = array("color1" => "Red", "color2" => "Green", "color3" => "Yellow");
+
+print_r(shuffle_assoc($colors));
