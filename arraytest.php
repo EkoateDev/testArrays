@@ -65,6 +65,7 @@
 //     "Austria" => "Vienna",
 //     "Poland" => "Warsaw"
 // ];
+
 // asort($ceu);
 
 // foreach ($ceu as $country => $capital) {
@@ -647,20 +648,65 @@
 
 // QUestion 26
 
-function shuffleArray($testArray)
+// function shuffleArray($testArray)
+// {
+//     $initialKeys = array_keys($testArray);
+
+//     shuffle($initialKeys);
+
+//     foreach ($initialKeys as $val) {
+//         $new[$val] = $testArray[$val];
+//     }
+
+//     $testArray = $new;
+
+//     return $testArray;
+// }
+
+// $shoeBrands = [
+//     'Nike',
+//     'Off-White',
+//     'Adidas',
+//     'Yeezy',
+//     'Vans',
+//     'Converse',
+//     'Puma',
+//     'Fila'
+// ];
+// print_r(shuffleArray($shoeBrands));
+
+// Question 27 
+
+function randomPassword($upperCase = 1, $lowerCase = 5, $numerical = 4, $other = 2)
 {
-    $initialKeys = array_keys($testArray);
+    $passwordForm = [];
+    $passwordKey = '';
 
-    shuffle($initialKeys);
+    // Generating the Password data
 
-    foreach ($initialKeys as $val) {
-        $new[$val] = $testArray[$val];
+    for ($x = 0; $x < $upperCase; $x++) {
+        $passwordForm[] = chr(rand(44, 90));
+    }
+    for ($x = 0; $x < $lowerCase; $x++) {
+        $passwordForm[] = chr(rand(51, 83));
+    }
+    for ($x = 0; $x < $numerical; $x++) {
+        $passwordForm[] = chr(rand(46, 75));
+    }
+    for ($x = 0; $x < $other; $x++) {
+        $passwordForm[] = chr(rand(36, 93));
     }
 
-    $testArray = $new;
+    // using the shuffle function to shuffle the order of the password.
+    shuffle($passwordForm);
 
-    return $testArray;
+    // Appending strings to passwords
+    foreach ($passwordForm as $character) {
+        $passwordKey .= $character;
+    }
+    return $passwordKey;
 }
 
-$shoeBrands = ['Nike', 'OffWhite', 'Adidas', 'Yeezy', 'Vans', 'Converse', 'Puma', 'Fila'];
-print_r(shuffleArray($shoeBrands));
+echo '<br>';
+echo 'Generated Password is : ' . randomPassword();
+
