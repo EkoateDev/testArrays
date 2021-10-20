@@ -733,16 +733,51 @@
 
 // Question 29
 
-function stringRange($string1)
-{
-    preg_match_all("/([0-9]{1,2})-?([0-9]{0,2}) ?,?;?/", $string1, $a);
-    $y = [];
-    foreach ($a[1] as $z => $i) {
-        $y = array_merge($y, range($i, (empty($a[2][$z]) ? $i : $a[2][$z])));
-    }
-    return ($y);
-}
+// function stringRange($string1)
+// {
+//     preg_match_all("/([0-9]{1,2})-?([0-9]{0,2}) ?,?;?/", $string1, $a);
+//     $y = [];
+//     foreach ($a[1] as $z => $i) {
+//         $y = array_merge($y, range($i, (empty($a[2][$z]) ? $i : $a[2][$z])));
+//     }
+//     return ($y);
+// }
 
-$testString = '1-2 18-20 9-11';
-print_r(stringRange($testString));
+// $testString = '1-2 18-20 9-11';
+// print_r(stringRange($testString));
 
+
+// Question 30 
+
+// function letterRange($length)
+// {
+//     $inputRange = [];
+//     $letters = range('A', 'Z');
+//     for ($x = 0; $x < $length; $x++) {
+//         $positions = $x * 26;
+//         foreach ($letters as $y => $values) {
+//             $positions++;
+//             if ($positions <= $length)
+//                 $inputRange[] = ($positions > 26 ? $inputRange[$x - 1] : '') . $values;
+//         }
+//     }
+//     return $inputRange;
+// }
+// print_r(letterRange(7));
+
+
+// Question 31 
+
+
+
+$x = array(
+    'value1' => 3021,
+    'value2' => 2365,
+    'value3' => 5215,
+    'value4' => 5214,
+    'value5' => 2145
+);
+reset($x);   // optional.
+arsort($x);
+$key_of_max = key($x);
+echo "Index of the highest value : " . $key_of_max . "\n";
