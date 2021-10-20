@@ -783,15 +783,37 @@
 
 // Question 32 
 
-function fileExtension($data)
-{
-    $data = implode(
-        '',
-        explode('\\', $data)
-    );
-    $data = explode('.', $data);
-    $data = strtolower(end($data));
-    return $data;
-}
-$file = 'practice.rar';
-echo fileExtension($file);
+// function fileExtension($data)
+// {
+//     $data = implode(
+//         '',
+//         explode('\\', $data)
+//     );
+//     $data = explode('.', $data);
+//     $data = strtolower(end($data));
+//     return $data;
+// }
+// $file = 'practice.rar';
+// echo fileExtension($file);
+
+// Question 33
+
+// function arraySearch($firstArray, $find)
+// {
+//     reset($firstArray);
+//     foreach ($firstArray as $key => $value) {
+//         if (preg_match("/$find/i", $value)) {
+//             echo $find . ' has been found in ' . $key .'<br>';
+//         } else {
+//             echo $find . ' is not available in ' . $key . '<br>';
+//         }
+//     }
+// }
+// $testArray = [
+//     'Nike' => 'Air-Max',
+//     'MJ' => 'Jordan',
+//     'Adidas' => 'Pharrell',
+//     'Kanye' => 'Yeezy',
+// ];
+
+// arraysearch($testArray, 'Jordan');
