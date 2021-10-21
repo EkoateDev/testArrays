@@ -1043,3 +1043,42 @@
 // echo ' The emails which are not Unique are : ';
 // echo '<br>';
 // print_r(arrayNotUnique($emailArray));
+
+
+// Question 42 
+
+function flatArray($defaultArray)
+{
+    $flattenValues = [];
+    $depth = 0;
+
+    foreach ($defaultArray as $y => $z) {
+        if (!is_array($z)) {
+            $flattenValues[] = $z;
+            continue;
+        }
+        $depth++;
+        $flattenValues = flatArray($z, $flattenValues, $depth);
+        $depth--;
+    }
+    if ($depth == 0) $flattenValues = array_values(array_unique($flattenValues));
+    return $flattenValues;
+}
+$multiValues = [
+    'a' => [
+        -1,
+        -2,
+        0,
+        2,
+        3
+    ],
+    'b' => ['c' => [
+        -1,
+        0,
+        2,
+        0,
+        3
+    ]]
+];
+
+print_r(flatArray($multiValues));
