@@ -832,3 +832,27 @@
 
 // asort($testArray, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
 // print_r($testArray);
+
+// Question 35 
+// function elementTrim($trimmed)
+// {
+//     $trimmed = trim('&$val', '$val');
+
+//     return $trimmed;
+// }
+
+// $drinks = [
+//     'Malata ',
+//     ' Coke',
+//     ' Fanta ',
+//     'Ciroc ',
+//     ' RedBull '
+// ];
+
+// print_r($drinks);
+// echo '<br>';
+// echo '<br>';
+
+// array_walk($drinks, 'elementTrim');
+
+// print_r($drinks);
