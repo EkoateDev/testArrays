@@ -990,3 +990,22 @@
 // print_r($uniqueDrivers);
 // echo '<br>';
 // print_r($uniqueId);
+
+
+// Question 40
+
+// $colors = [
+//     'white',
+//     'white',
+//     'yellow',
+//     'black',
+//     'red',
+//     'blue',
+//     'black',
+//     'white',
+//     'blue'
+// ];
+
+// $sortedUniqueArray = array_values(array_unique($colors));
+
+// print_r($sortedUniqueArray);
