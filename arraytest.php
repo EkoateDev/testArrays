@@ -834,6 +834,7 @@
 // print_r($testArray);
 
 // Question 35 
+
 // function elementTrim($trimmed)
 // {
 //     $trimmed = trim('&$val', '$val');
@@ -856,3 +857,35 @@
 // array_walk($drinks, 'elementTrim');
 
 // print_r($drinks);
+
+
+// Question 36 
+
+$driversArray = [
+    'driver1',
+    'Driver11',
+    'driver10',
+    'Driver6',
+    'driver4',
+    'DRIVER40',
+    'driver10'
+];
+echo 'This is the Default Array without conversion';
+echo '<br>';
+print_r($driversArray);
+
+echo '<br>';
+echo '<br>';
+
+echo 'This is the Array converted to LOWER CASE';
+echo '<br>';
+$lowerCase = array_map('strtolower', $driversArray);
+print_r($lowerCase);
+
+echo '<br>';
+echo '<br>';
+
+echo 'This is the Array converted to UPPER CASE';
+echo '<br>';
+$upperCase = array_map('strtoupper', $driversArray);
+print_r($upperCase);
