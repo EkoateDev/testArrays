@@ -1009,3 +1009,37 @@
 // $sortedUniqueArray = array_values(array_unique($colors));
 
 // print_r($sortedUniqueArray);
+
+// Question 41
+
+function arrayNotUnique($defaultArray)
+{
+    $identical = [];
+    natcasesort($defaultArray);
+    reset($defaultArray);
+
+    $outdatedKey = NULL;
+    $outdatedValue = NULL;
+    foreach ($defaultArray as $key => $value) {
+        if ($value === NULL) {
+            continue;
+        }
+        if ($outdatedValue == $value) {
+            $identical[$outdatedKey] = $outdatedValue;
+            $identical[$key] = $outdatedValue;
+        }
+        $outdatedValue = $value;
+        $outdatedKey = $key;
+    }
+    return $identical;
+}
+$emailArray = [
+    'nk@outlook.com',
+    'joeboy@outlook.com',
+    'bigwiz@outlook.com',
+    'nk@outlook.com',
+];
+
+echo ' The emails that are not Unique are : ';
+echo '<br>';
+print_r(arrayNotUnique($emailArray));
