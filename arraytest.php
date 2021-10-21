@@ -861,31 +861,58 @@
 
 // Question 36 
 
-$driversArray = [
-    'driver1',
-    'Driver11',
-    'driver10',
-    'Driver6',
-    'driver4',
-    'DRIVER40',
-    'driver10'
+// $driversArray = [
+//     'driver1',
+//     'Driver11',
+//     'driver10',
+//     'Driver6',
+//     'driver4',
+//     'DRIVER40',
+//     'driver10'
+// ];
+// echo 'This is the Default Array without conversion';
+// echo '<br>';
+// print_r($driversArray);
+
+// echo '<br>';
+// echo '<br>';
+
+// echo 'This is the Array converted to LOWER CASE';
+// echo '<br>';
+// $lowerCase = array_map('strtolower', $driversArray);
+// print_r($lowerCase);
+
+// echo '<br>';
+// echo '<br>';
+
+// echo 'This is the Array converted to UPPER CASE';
+// echo '<br>';
+// $upperCase = array_map('strtoupper', $driversArray);
+// print_r($upperCase);
+
+// Question 37 
+
+function valueCount($sumData, $pairing)
+{
+    $total = array_sum($sumData);
+
+    foreach ($sumData as $x => $content) {
+        if ($content == $pairing) {
+            $total++;
+        }
+    }
+
+    return $total;
+}
+
+$drivers = [
+    'Lewis',
+    'Max',
+    'lando',
+    'Lewis',
+    'Valtteri',
+    'Ricciardo',
+    'George'
 ];
-echo 'This is the Default Array without conversion';
-echo '<br>';
-print_r($driversArray);
 
-echo '<br>';
-echo '<br>';
-
-echo 'This is the Array converted to LOWER CASE';
-echo '<br>';
-$lowerCase = array_map('strtolower', $driversArray);
-print_r($lowerCase);
-
-echo '<br>';
-echo '<br>';
-
-echo 'This is the Array converted to UPPER CASE';
-echo '<br>';
-$upperCase = array_map('strtoupper', $driversArray);
-print_r($upperCase);
+echo 'The Driver Lewis appears ' . valueCount($drivers, 'Lewis') . ' time(s) ';
