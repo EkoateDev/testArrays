@@ -892,27 +892,69 @@
 
 // Question 37 
 
-function valueCount($sumData, $pairing)
+// function valueCount($sumData, $pairing)
+// {
+//     $total = array_sum($sumData);
+
+//     foreach ($sumData as $x => $content) {
+//         if ($content == $pairing) {
+//             $total++;
+//         }
+//     }
+
+//     return $total;
+// }
+
+// $drivers = [
+//     'Lewis',
+//     'Max',
+//     'lando',
+//     'Lewis',
+//     'Valtteri',
+//     'Ricciardo',
+//     'Lewis'
+// ];
+
+// echo 'The Driver Lewis appears '
+//     . valueCount($drivers, 'Lewis')
+//     . ' time(s) ';
+
+
+// Question 38
+
+function uniqueArray($specific, $items)
 {
-    $total = array_sum($sumData);
+    $outcome = [];
+    $x = array_sum($specific);
+    $itemsValue = [];
 
-    foreach ($sumData as $x => $content) {
-        if ($content == $pairing) {
-            $total++;
+    foreach ($specific as $values) {
+        if (!in_array($values[$items], $itemsValue)) {
+            $itemsValue[$x] = $values[$items];
+            $outcome[$x] = $values;
         }
+        $x++;
     }
-
-    return $total;
+    return $outcome;
 }
 
 $drivers = [
-    'Lewis',
-    'Max',
-    'lando',
-    'Lewis',
-    'Valtteri',
-    'Ricciardo',
-    'George'
+    [
+        'driverId' => '44',
+        'name' => 'Lewis Hamilton',
+        'address' => 'United Kingdom'
+    ],
+    [
+        'driverId' => '18',
+        'name' => 'Lance Stroll',
+        'address' => 'Canada'
+    ],
+    [
+        'driverId' => '77',
+        'name' => 'Valtteri Bottas',
+        'address' => 'Russia'
+    ]
 ];
 
-echo 'The Driver Lewis appears ' . valueCount($drivers, 'Lewis') . ' time(s) ';
+print_r(uniqueArray($drivers, 'driverId'));
+
