@@ -922,39 +922,71 @@
 
 // Question 38
 
-function uniqueArray($specific, $items)
-{
-    $outcome = [];
-    $x = array_sum($specific);
-    $itemsValue = [];
+// function uniqueArray($specific, $items)
+// {
+//     $outcome = [];
+//     $x = array_sum($specific);
+//     $itemsValue = [];
 
-    foreach ($specific as $values) {
-        if (!in_array($values[$items], $itemsValue)) {
-            $itemsValue[$x] = $values[$items];
-            $outcome[$x] = $values;
-        }
-        $x++;
-    }
-    return $outcome;
-}
+//     foreach ($specific as $values) {
+//         if (!in_array($values[$items], $itemsValue)) {
+//             $itemsValue[$x] = $values[$items];
+//             $outcome[$x] = $values;
+//         }
+//         $x++;
+//     }
+//     return $outcome;
+// }
 
-$drivers = [
-    [
-        'driverId' => '44',
-        'name' => 'Lewis Hamilton',
-        'address' => 'United Kingdom'
-    ],
-    [
-        'driverId' => '18',
-        'name' => 'Lance Stroll',
-        'address' => 'Canada'
-    ],
-    [
-        'driverId' => '77',
-        'name' => 'Valtteri Bottas',
-        'address' => 'Russia'
-    ]
-];
+// $drivers = [
+//     [
+//         'driverId' => '44',
+//         'name' => 'Lewis Hamilton',
+//         'address' => 'United Kingdom'
+//     ],
+//     [
+//         'driverId' => '18',
+//         'name' => 'Lance Stroll',
+//         'address' => 'Canada'
+//     ],
+//     [
+//         'driverId' => '77',
+//         'name' => 'Valtteri Bottas',
+//         'address' => 'Russia'
+//     ]
+// ];
 
-print_r(uniqueArray($drivers, 'driverId'));
+// print_r(uniqueArray($drivers, 'driverId'));
 
+
+// Question 39 
+
+// $drivers = [
+//     'George',
+//     'George',
+//     'Lando',
+//     'George',
+//     'Lewis',
+//     'Valtteri',
+//     'Max',
+//     'Lewis'
+// ];
+
+// $driversId = [
+//     77,
+//     63,
+//     77,
+//     44,
+//     77,
+//     23,
+//     3,
+//     44,
+//     63
+// ];
+
+// $uniqueDrivers = array_keys(array_flip($drivers));
+// $uniqueId = array_keys(array_flip($driversId));
+
+// print_r($uniqueDrivers);
+// echo '<br>';
+// print_r($uniqueId);
