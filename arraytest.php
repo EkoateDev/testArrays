@@ -1169,3 +1169,23 @@
 // var_dump(stringsCheck($arrayOne));
 // var_dump(stringsCheck($arrayTwo));
 
+// Question 47 
+
+function firstElement($defaultArray)
+{
+    list($values) = array_keys($defaultArray);
+    $outcome = [
+        $values => $defaultArray[$values]
+    ];
+    unset($defaultArray[$values]);
+    return $outcome;
+}
+$driverTwo = [
+
+    'Lewis' => 44,
+    'George' => 63,
+    'Max' => 23,
+    'Perez' => 11
+];
+print_r(firstElement($driverTwo));
+
