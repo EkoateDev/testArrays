@@ -1102,7 +1102,70 @@
 
 
 // Question 44
-// function mergeCommas($join)
+// function removeDuplicates($specificArray, $values)
 // {
-//     $combine = $join;
+//     $combined = 0;
+
+//     foreach ($specificArray as $key => $setValues) {
+//         if (($combined > 0) && ($setValues == $values)) {
+//             unset($specificArray[$key]);
+//         }
+//         if ($setValues == $values) $combined++;
+//     }
+//     return array_filter($specificArray);
 // }
+
+// $total = [4, 5, 6, 7, 4, 7, 8];
+
+// print_r (removeDuplicates($total, 7));
+
+// Question 45
+
+// $multiArray = function ($a, $b) {
+//     return strcmp(implode('', $a), implode('', $b));
+// };
+
+// $driverOne = [
+//     [
+//         'Lewis' => 44
+//     ],
+//     [
+//         'Valtteri' => 77
+//     ],
+//     [
+//         'Lando' => 3
+//     ]
+// ];
+
+// $driverTwo = [
+//     [
+//         'Lewis' => 44
+//     ],
+//     [
+//         'Perez' => 11
+//     ]
+// ];
+
+// $formulaOne = array_udiff($driverOne, $driverTwo, $multiArray);
+
+// print_r($formulaOne);
+
+// Question 46 
+
+// function stringsCheck($values)
+// {
+//     return array_sum(array_map('is_string', $values)) == count($values);
+// }
+// $arrayOne = [
+//     'Ekoate',
+//     'Laravel',
+//     'TeamLH',
+// ];
+// $arrayTwo = [
+//     'Valtteri',
+//     44,
+//     77,
+// ];
+// var_dump(stringsCheck($arrayOne));
+// var_dump(stringsCheck($arrayTwo));
+
