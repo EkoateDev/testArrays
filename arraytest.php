@@ -1082,3 +1082,27 @@
 // ];
 
 // print_r(flatArray($multiValues));
+
+// Question 43 
+
+// $listOne = 'Ham, Valtteri, Max, Lando';
+// $listTwo = 'Ham, Valtteri, Lando, Sainz';
+
+// // combing both lists and altering them by unique value. 
+// $outcome = implode(
+//     ',',
+//     array_unique(
+//         array_merge(
+//             explode(',', $listOne),
+//             explode(',', $listTwo)
+//         )
+//     )
+// );
+// echo $outcome;
+
+
+// Question 44
+// function mergeCommas($join)
+// {
+//     $combine = $join;
+// }
