@@ -1233,32 +1233,45 @@
 
 // Question 50 
 
-$testData = [
+// $testData = [
+//     'c1' => 'Red',
+//     'c2' => 'Green',
+//     'c3' => 'White',
+//     'c4' => 'Black'
+// ];
+
+// echo 'The next Pointer is : ';
+// echo '<br>';
+// echo next($testData);
+// echo '<br>';
+// echo '<br>';
+
+// echo 'The Last array Value is : ';
+// echo '<br>';
+// $expectedOutcome = $testData;
+
+// $lastValue = array_pop($expectedOutcome);
+
+// print_r($lastValue);
+// echo '<br>';
+// echo '<br>';
+
+// echo 'All the values of the array : ';
+// echo '<br>';
+// print_r($testData);
+
+
+// Question 51
+
+$firstData = [
     'c1' => 'Red',
     'c2' => 'Green',
     'c3' => 'White',
     'c4' => 'Black'
 ];
 
-echo 'The next Pointer is : ';
-echo '<br>';
-echo next($testData);
-echo '<br>';
-echo '<br>';
+$secondData = ['c2', 'c4'];
 
-echo 'The Last array Value is : ';
-echo '<br>';
-$expectedOutcome = $testData;
+$outcome = array_diff_key($firstData, array_flip($secondData));
 
-$lastValue = array_pop($expectedOutcome);
-
-print_r($lastValue ."\n");
-echo '<br>';
-echo '<br>';
-
-echo 'All the values of the array : ';
-echo '<br>';
-print_r($testData);
-
-
-
+print_r($outcome);
