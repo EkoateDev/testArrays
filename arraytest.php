@@ -1240,8 +1240,25 @@ $testData = [
     'c4' => 'Black'
 ];
 
-$colors = array('c1' => 'Red',  'c2' => 'Green',  'c3' => 'White',  'c4' => 'Black');
-echo next($colors) . "\n";
-$last = array_pop(array_keys(array_flip($colors)));
-echo $last . "\n";
-echo current($colors) . "\n";
+echo 'The next Pointer is : ';
+echo '<br>';
+echo next($testData);
+echo '<br>';
+echo '<br>';
+
+echo 'The Last array Value is : ';
+echo '<br>';
+$expectedOutcome = $testData;
+
+$lastValue = array_pop($expectedOutcome);
+
+print_r($lastValue ."\n");
+echo '<br>';
+echo '<br>';
+
+echo 'All the values of the array : ';
+echo '<br>';
+print_r($testData);
+
+
+
