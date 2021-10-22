@@ -1171,21 +1171,47 @@
 
 // Question 47 
 
-function firstElement($defaultArray)
-{
-    list($values) = array_keys($defaultArray);
-    $outcome = [
-        $values => $defaultArray[$values]
-    ];
-    unset($defaultArray[$values]);
-    return $outcome;
-}
-$driverTwo = [
+// function firstElement($defaultArray)
+// {
+//     list($values) = array_keys($defaultArray);
+//     $outcome = [
+//         $values => $defaultArray[$values]
+//     ];
+//     unset($defaultArray[$values]);
+//     return $outcome;
+// }
+// $driverTwo = [
+//     'Lewis' => 44,
+//     'George' => 63,
+//     'Max' => 23,
+//     'Perez' => 11
+// ];
+// print_r(firstElement($driverTwo));
 
-    'Lewis' => 44,
-    'George' => 63,
-    'Max' => 23,
-    'Perez' => 11
+// Question 48
+
+function unionSet($x, $y)
+{
+    $arrayJoin = array_merge(
+        array_intersect($x, $y),
+        array_diff($x, $y),
+        array_diff($y, $x),
+    );
+    return $arrayJoin;
+}
+$a = [
+    'Ham',
+    'Lewis',
+    'Vb',
+    'GR',
 ];
-print_r(firstElement($driverTwo));
+$b = [
+    'Lewis',
+    'Vb',
+    'GR',
+    'Lando',
+    'Ricciardo'
+];
+
+print_r(unionSet($a, $b));
 
