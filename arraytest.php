@@ -1190,28 +1190,58 @@
 
 // Question 48
 
-function unionSet($x, $y)
-{
-    $arrayJoin = array_merge(
-        array_intersect($x, $y),
-        array_diff($x, $y),
-        array_diff($y, $x),
-    );
-    return $arrayJoin;
-}
-$a = [
-    'Ham',
-    'Lewis',
-    'Vb',
-    'GR',
-];
-$b = [
-    'Lewis',
-    'Vb',
-    'GR',
-    'Lando',
-    'Ricciardo'
+// function unionSet($x, $y)
+// {
+//     $arrayJoin = array_merge(
+//         array_intersect($x, $y),
+//         array_diff($x, $y),
+//         array_diff($y, $x),
+//     );
+//     return $arrayJoin;
+// }
+// $a = [
+//     'Ham',
+//     'Lewis',
+//     'Vb',
+//     'GR',
+// ];
+// $b = [
+//     'Lewis',
+//     'Vb',
+//     'GR',
+//     'Lando',
+//     'Ricciardo'
+// ];
+
+// print_r(unionSet($a, $b));
+
+
+// Question 49 
+
+// $testData = [
+//     'c1' => 'Red',
+//     'c2' => 'Green',
+//     'c3' => 'White',
+//     'c4' => 'Black'
+// ];
+
+// $secondData = ['c2', 'c4'];
+// echo '<em> Output : </em>';
+// echo '<br>';
+// print_r(array_intersect_key($testData, array_flip($secondData)));
+
+
+// Question 50 
+
+$testData = [
+    'c1' => 'Red',
+    'c2' => 'Green',
+    'c3' => 'White',
+    'c4' => 'Black'
 ];
 
-print_r(unionSet($a, $b));
-
+$colors = array('c1' => 'Red',  'c2' => 'Green',  'c3' => 'White',  'c4' => 'Black');
+echo next($colors) . "\n";
+$last = array_pop(array_keys(array_flip($colors)));
+echo $last . "\n";
+echo current($colors) . "\n";
