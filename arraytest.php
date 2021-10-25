@@ -498,15 +498,24 @@
 
 // $color = [
 //     'color' =>
-//     array(
+//     [
 //         'a' => 'Red',
 //         'b' => 'Green',
 //         'c' => 'White'
-//     ),
-//     'numbers' => array(
-//         1, 2, 3, 4, 5, 6
-//     ),
-//     'holes' => array('First', 5 => 'Second', 'Third')
+//     ],
+//     'numbers' => [
+//         1,
+//         2,
+//         3,
+//         4,
+//         5,
+//         6
+//     ],
+//     'holes' => [
+//         'First',
+//         5 => 'Second',
+//         'Third'
+//     ]
 // ];
 
 // echo $color['holes'][5];
@@ -546,7 +555,9 @@
 // $priority[6] = 2;
 
 // usort($priority, 'arraySort');
+
 // echo '<br>';
+
 // print_r($priority);
 
 
@@ -558,6 +569,7 @@
 //     $arrayB = explode('.', $b);
 
 //     foreach (range(0, 3) as $x) {
+
 //         if ($arrayA[$x] < $arrayB[$x]) {
 //             return -1;
 //         } elseif ($arrayA[$x] > $arrayB[$x]) {
@@ -578,6 +590,8 @@
 // ];
 
 // usort($subnets, 'subnetSort');
+
+// echo '<pre>';
 // print_r($subnets);
 
 
@@ -585,46 +599,48 @@
 // Question 22
 
 
-// $pages[0]['page_id'] = '2025731470';
-// $pages[1]['page_id'] = '2025731450';
-// $pages[2]['page_id'] = '1025731456';
-// $pages[3]['page_id'] = '1025731460';
+$pages[0]['page_id'] = '2025731470';
+$pages[1]['page_id'] = '2025731450';
+$pages[2]['page_id'] = '1025731456';
+$pages[3]['page_id'] = '1025731460';
 
-// $pages[0]['user_name'] = 'Neko';
-// $pages[1]['user_name'] = 'Meek';
-// $pages[2]['user_name'] = 'Santan';
-// $pages[3]['user_name'] = 'Oxlade';
+$pages[0]['user_name'] = 'Neko';
+$pages[1]['user_name'] = 'Meek';
+$pages[2]['user_name'] = 'Santan';
+$pages[3]['user_name'] = 'Oxlade';
 
-// //converting timestamp to date here 
-// function convertTimeStamp($timestamp)
-// {
-//     $limit = date('U');
-//     $limiting = $timestamp - $limit;
-//     return date('Y,M,D', mktime(0, 0, $limiting));
-// }
-// // //The Comparison function 
-// function comparison($valueA, $valueB)
-// {
-//     $x = convertTimeStamp($valueA['page_id']);
-//     $y = convertTimeStamp($valueB['page_id']);
-//     if ($y == $x) {
-//         return strcmp($valueA['user_name'], $valueB['user_name']);
-//     } else {
-//         return strcmp($y, $x);
-//     }
-// }
-// //sort array 
-// usort($pages, 'comparison');
+//converting timestamp to date here 
+function convertTimeStamp($timestamp)
+{
+    $limit = date('U');
+    $limiting = $timestamp - $limit;
 
-// // //printing the sorted Page id and username 
+    return date('Y,M,D', mktime(0, 0, $limiting));
+}
+//The Comparison function 
+function comparison($valueA, $valueB)
+{
+    $x = convertTimeStamp($valueA['page_id']);
+    $y = convertTimeStamp($valueB['page_id']);
 
-// foreach ($pages as $key => $value) {
-//     echo $key;
-//     echo $value['page_id'];
-//     echo ' user_name: ';
-//     echo $value['user_name'] . ' , ';
-//     echo "\n";
-// }
+    if ($y == $x) {
+        return strcmp($valueA['user_name'], $valueB['user_name']);
+    } else {
+        return strcmp($y, $x);
+    }
+}
+//sort array 
+usort($pages, 'comparison');
+
+//printing the sorted Page id and username 
+
+foreach ($pages as $key => $value) {
+    echo $key;
+    echo $value['page_id'];
+    echo ' user_name: ';
+    echo $value['user_name'] . ' , ';
+    echo "\n";
+}
 
 // Question 23
 
