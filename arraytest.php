@@ -306,18 +306,18 @@
 // Question 11
 
 // $arrayOne = [
-//     array(77, 87), 
-//     array(23, 45)
+//     [77, 87],
+//     [23, 45]
 // ];
 
 // $arrayTwo = [
-//     'w3resource', 
+//     'w3resource',
 //     'com'
 // ];
 
 // function mergeByIndex($value1, $value2)
 // {
-//     $result = array();
+//     $result = [];
 //     $result[] = $value1;
 //     if (is_scalar($value2)) {
 //         $result[] = $value2;
@@ -337,7 +337,7 @@
 // function arrayChange($input, $userCase)
 // {
 //     $cases = $userCase;
-//     $defaultArray = array();
+//     $defaultArray = [];
 
 //     if (!is_array($input)) {
 //         return $defaultArray;
@@ -363,43 +363,56 @@
 
 // echo 'Values are in lower case. ';
 // echo '<br>';
+
 // $newCase = arrayChange($color, CASE_LOWER);
 // print_r($newCase);
+
 // echo '<br>';
 
 // echo 'Values are in upper case. ';
 // echo '<br>';
+
 // $newCase = arrayChange($color, CASE_UPPER);
 // print_r($newCase);
 
 
 // Question 13 
 
-// echo implode(',', range(200,250,4));
-// echo '<br>';
+// echo '<em> Expected Output : </em>';
+// echo implode(',', range(200, 250, 4));
 
 // Question 14 
 
-// $defaultArray = ['abcd','abc','de','hjjj','g','wer'];
+// $defaultArray = [
+//     'abcd',
+//     'abc',
+//     'de',
+//     'hjjj',
+//     'g',
+//     'wer'
+// ];
 
 // $newArray = array_map('strlen', $defaultArray);
 
-// echo '<em>Expected Output : </em>';
-// echo 'The shortest array length is '.min($newArray) .'.'
-// . ' The longest array length is ' .max($newArray) .'.';
+// echo '<em> Expected Output : </em>';
+
+// echo 'The shortest array length is ' . min($newArray) .
+//     '. The longest array length is ' . max($newArray) .
+//     '.';
 
 // Question 15 
 
-// $randomNumbers = range(11, 20);
-// shuffle($randomNumbers);
+$sampleRange = range(11, 20);
 
-// echo '<em> Sample Range : (11, 20)</em>';
-// echo '<br>';
-// echo '<em>Sample Output : </em>';
+shuffle($sampleRange);
 
-// for ($i = 0; $i < 10; $i++) {
-//     echo $randomNumbers[$i] . ' ';
-// }
+echo '<em> Sample Range : (11, 20)</em>';
+echo '<br>';
+echo '<em>Sample Output : </em>';
+
+for ($i = 0; $i < 10; $i++) {
+    echo $sampleRange[$i] . ' ';
+}
 
 
 // Question 16 
