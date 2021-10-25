@@ -402,17 +402,17 @@
 
 // Question 15 
 
-$sampleRange = range(11, 20);
+// $sampleRange = range(11, 20);
 
-shuffle($sampleRange);
+// shuffle($sampleRange);
 
-echo '<em> Sample Range : (11, 20)</em>';
-echo '<br>';
-echo '<em>Sample Output : </em>';
+// echo '<em> Sample Range : (11, 20)</em>';
+// echo '<br>';
+// echo '<em>Sample Output : </em>';
 
-for ($i = 0; $i < 10; $i++) {
-    echo $sampleRange[$i] . ' ';
-}
+// for ($i = 0; $i < 10; $i++) {
+//     echo $sampleRange[$i] . ' ';
+// }
 
 
 // Question 16 
@@ -454,10 +454,16 @@ for ($i = 0; $i < 10; $i++) {
 
 // function minValue(array $values)
 // {
-//     return min(array_diff(array_map('intval', $values), array(0)));
+//     return min(array_diff(array_map('intval', $values), [0]));
 // }
 
-// print_r(minValue(array(-1, -1, 0, 1, 12, -100, 1)));
+// print_r(
+//     minValue(
+//         [
+//             -1, -1, 0, 1, 12, -100, 1
+//         ]
+//     )
+// );
 
 
 // Question 18 
