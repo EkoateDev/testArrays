@@ -88,24 +88,26 @@
 // echo '<br>';
 // echo var_dump($x);
 // echo '<br>';
+
 // unset($x[3]);
 
 // $xValues = array_values($x);
+
 // echo '<br>';
 // echo var_dump($xValues);
 
 
 // question 5
 
-// $color = [
-//     4 => 'white',
-//     6 => 'green',
-//     11 => 'red'
-// ];
+$color = [
+    4 => 'white',
+    6 => 'green',
+    11 => 'red'
+];
 
-// $colorDisplay = $color[4];
+$colorDisplay = $color;
 
-// echo '<em> Expected result : </em>' . $colorDisplay;
+echo '<em> Expected result : </em>' . reset($colorDisplay);
 
 
 
