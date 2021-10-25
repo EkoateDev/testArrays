@@ -471,13 +471,17 @@
 // function decimalNumbers($number, $precision, $separator)
 // {
 //     $accurateNum = explode($separator, $number);
+
 //     $accurateNum[1] = substr_replace($accurateNum[1], $separator, $precision, 0);
+
 //     if ($accurateNum[0] >= 0) {
 //         $accurateNum[1] = floor($accurateNum[1]);
 //     } else {
 //         $accurateNum[1] = ceil($accurateNum[1]);
 //     }
-//     $ceilNumber = array($accurateNum[0], $accurateNum[1]);
+
+//     $ceilNumber = [$accurateNum[0], $accurateNum[1]];
+
 //     return implode($separator, $ceilNumber);
 // }
 // echo '<em> Expected Output : </em>';
