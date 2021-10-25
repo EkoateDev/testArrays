@@ -272,7 +272,7 @@
 //     $x = $inputArray;
 
 //     if (count($x) == 0)
-//         return array();
+//         return [];
 
 //     elseif (count($x) == 1)
 //         return array_chunk($x, 1);
@@ -282,18 +282,25 @@
 //     $valueSorting = call_user_func_array('array_map', $inputArray);
 //     return array_map('array_filter', $valueSorting);
 // }
-// function bead_sort($inputArray)
+// function beadSort($inputArray)
 // {
 //     foreach ($inputArray as $i)
-//         $positiveValues[] = array_fill(0, $i, 1);
-//     return array_map('count', displayValues(displayValues($positiveValues)));
+//         $positiveArrayValues[] = array_fill(0, $i, 1);
+//     return array_map('count', displayValues(displayValues($positiveArrayValues)));
 // }
 
-// echo '<em>Input Array : </em>';
-// print_r(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3));
+// $arrayOne = [5, 3, 1, 3, 8, 7, 4, 1, 1, 3];
+
+// $arrayTwo = [5, 3, 1, 3, 8, 7, 4, 1, 1, 3];
+
+// echo '<em> Input Array : </em>';
+
+// print_r($arrayOne);
+
 // echo '<br>';
 // echo '<em> Expected Result : </em>';
-// print_r(bead_sort(array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3)));
+
+// print_r(beadSort($arrayTwo));
 
 
 // Question 11
