@@ -113,26 +113,25 @@
 
 // Question 6 
 
-function jsonElements($value, $key)
-{
-    echo "$key : $value " . '<br>';
-}
+// function jsonElements($value, $key)
+// {
+//     echo "$key : $value " . '<br>';
+// }
 
-$jsonObject = '{
-"Title": "The Cuckoos Calling",
-"Author": "Robert Galbraith",
-"Detail": {
-"Publisher": "Little Brown"
-}
-}';
+// $jsonObject = '{
+// "Title": "The Cuckoos Calling",
+// "Author": "Robert Galbraith",
+// "Detail": {
+// "Publisher": "Little Brown"
+// }
+// }';
 
-$object = json_decode($jsonObject, true);
+// $object = json_decode($jsonObject, true);
 
-echo '<em> Expected Output : </em>';
-echo '<br>';
+// echo '<em> Expected Output : </em>';
+// echo '<br>';
 
-array_walk_recursive($object, 'jsonElements');
-
+// array_walk_recursive($object, 'jsonElements');
 
 
 
@@ -149,8 +148,10 @@ array_walk_recursive($object, 'jsonElements');
 
 // echo '<em> Expected Output : </em>';
 // echo '<br>';
+
 // echo 'Original array :';
 // echo '<br>';
+
 // foreach ($originalArray as $x) {
 //     echo $x;
 // }
@@ -163,8 +164,10 @@ array_walk_recursive($object, 'jsonElements');
 
 // echo '<br>';
 // echo '<br>';
+
 // echo 'After inserting "$" the array is :';
 // echo '<br>';
+
 // foreach ($originalArray as $x) {
 //     echo $x;
 // }
