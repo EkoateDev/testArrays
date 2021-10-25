@@ -229,7 +229,8 @@
 
 // Question 9
 
-// $recordedTemperatures = '78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73';
+// $recordedTemperatures = '78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 
+// 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73';
 
 // $temperatureArray = explode(',', $recordedTemperatures);
 
@@ -240,15 +241,16 @@
 // echo '<em> Expected Output :</em>';
 // echo '<br>';
 
-// foreach ($temperatureArray as $temp) {
-//     $temp =  $totalTemperature / $temperatureArrayLength;
+// foreach ($temperatureArray as $averageTemp) {
+//     $averageTemp =  $totalTemperature / $temperatureArrayLength;
 // }
-// echo 'Average Temperature is : ' . $temp;
+// echo 'Average Temperature is : ' . $averageTemp;
 
 // echo '<br>';
 // echo '<br>';
 
 // sort($temperatureArray);
+
 // echo 'List of Seven lowest temperatures : ';
 // for ($x = 0; $x < 7; $x++) {
 //     echo $temperatureArray[$x];
@@ -258,7 +260,7 @@
 // echo '<br>';
 
 // echo 'List of Seven Highest temperatures : ';
-// for ($x = ($temperatureArrayLength - 7); $x < ($temperatureArrayLength); $x++) {
+// for ($x = ($temperatureArrayLength); $x < ($temperatureArrayLength); $x++) {
 //     echo $temperatureArray[$x];
 // }
 
