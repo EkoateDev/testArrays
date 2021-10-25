@@ -99,36 +99,43 @@
 
 // question 5
 
-$color = [
-    4 => 'white',
-    6 => 'green',
-    11 => 'red'
-];
+// $color = [
+//     4 => 'white',
+//     6 => 'green',
+//     11 => 'red'
+// ];
 
-$colorDisplay = $color;
+// $colorDisplay = $color;
 
-echo '<em> Expected result : </em>' . reset($colorDisplay);
+// echo '<em> Expected result : </em>' . reset($colorDisplay);
 
 
 
 // Question 6 
 
-// $jsonObject = '{
-// "Title": "The Cuckoos Calling",
-// "Author": "Robert Galbraith",
-// "Detail": {
-// "Publisher": "Little Brown"
-// }
-// }';
+function jsonElements($value, $key)
+{
+    echo "$key : $value " . '<br>';
+}
 
-// $object = json_decode($jsonObject, true);
-// echo '<em> Expected Output : </em>';
-// echo '<br>';
-// echo 'Title : ' . $object['Title'];
-// echo '<br>';
-// echo 'Author : ' . $object['Author'];
-// echo '<br>';
-// echo 'Publisher : ' . $object['Detail']['Publisher'];
+$jsonObject = '{
+"Title": "The Cuckoos Calling",
+"Author": "Robert Galbraith",
+"Detail": {
+"Publisher": "Little Brown"
+}
+}';
+
+$object = json_decode($jsonObject, true);
+
+echo '<em> Expected Output : </em>';
+echo '<br>';
+
+array_walk_recursive($object, 'jsonElements');
+
+
+
+
 
 // Question 7
 
