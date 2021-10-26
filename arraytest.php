@@ -752,12 +752,8 @@
 
 // Question 27 
 
-// function randomPassword(
-//     $upperCase = 1,
-//     $lowerCase = 5,
-//     $numerical = 4,
-//     $other = 2
-// ) {
+// function randomPassword($upperCase = 1, $lowerCase = 5, $numerical = 4, $other = 2)
+// {
 //     $passwordForm = [];
 //     $passwordKey = '';
 
@@ -779,7 +775,7 @@
 //     // using the shuffle function to shuffle the order of the password.
 //     shuffle($passwordForm);
 
-//     // Appending strings to passwords
+//     // Appending values to the string
 //     foreach ($passwordForm as $character) {
 //         $passwordKey .= $character;
 //     }
@@ -804,6 +800,7 @@
 // ];
 
 // rsort($sneakers);
+// echo '<pre>';
 // print_r($sneakers);
 
 // Question 29
