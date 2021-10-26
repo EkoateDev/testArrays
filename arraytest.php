@@ -599,48 +599,48 @@
 // Question 22
 
 
-$pages[0]['page_id'] = '2025731470';
-$pages[1]['page_id'] = '2025731450';
-$pages[2]['page_id'] = '1025731456';
-$pages[3]['page_id'] = '1025731460';
+// $page[0]['page_id'] = '2025731470';
+// $page[1]['page_id'] = '2025731450';
+// $page[2]['page_id'] = '1025731456';
+// $page[3]['page_id'] = '1025731460';
 
-$pages[0]['user_name'] = 'Neko';
-$pages[1]['user_name'] = 'Meek';
-$pages[2]['user_name'] = 'Santan';
-$pages[3]['user_name'] = 'Oxlade';
+// $page[0]['user_name'] = 'Neko';
+// $page[1]['user_name'] = 'Meek';
+// $page[2]['user_name'] = 'Santan';
+// $page[3]['user_name'] = 'Oxlade';
 
-//converting timestamp to date here 
-function convertTimeStamp($timestamp)
-{
-    $limit = date('U');
-    $limiting = $timestamp - $limit;
+// //converting timestamp to date here 
+// function convertTimeStamp($timestamp)
+// {
+//     $limit = date('U');
+//     $limiting = $timestamp - $limit;
 
-    return date('Y,M,D', mktime(0, 0, $limiting));
-}
-//The Comparison function 
-function comparison($valueA, $valueB)
-{
-    $x = convertTimeStamp($valueA['page_id']);
-    $y = convertTimeStamp($valueB['page_id']);
+//     return date('Y,M,D', mktime(0, 0, $limiting));
+// }
+// //The Comparison function 
+// function comparison($valueA, $valueB)
+// {
+//     $x = convertTimeStamp($valueA['page_id']);
+//     $y = convertTimeStamp($valueB['page_id']);
 
-    if ($y == $x) {
-        return strcmp($valueA['user_name'], $valueB['user_name']);
-    } else {
-        return strcmp($y, $x);
-    }
-}
-//sort array 
-usort($pages, 'comparison');
+//     if ($y == $x) {
+//         return strcmp($valueA['user_name'], $valueB['user_name']);
+//     } else {
+//         return strcmp($y, $x);
+//     }
+// }
+// //sort array 
+// usort($page, 'comparison');
 
-//printing the sorted Page id and username 
+// //printing the sorted Page id and username 
 
-foreach ($pages as $key => $value) {
-    echo $key;
-    echo $value['page_id'];
-    echo ' user_name: ';
-    echo $value['user_name'] . ' , ';
-    echo "\n";
-}
+// foreach ($page as $key => $value) {
+//     echo '<pre>';
+//     echo "\$page [$key]: ";
+//     echo $value['page_id'];
+//     echo ' user_name: ';
+//     echo $value['user_name'];
+// }
 
 // Question 23
 
@@ -657,7 +657,7 @@ foreach ($pages as $key => $value) {
 //     }
 //     return $sorted;
 // }
-// $driver = array();
+// $driver = [];
 
 // $driver[0]['name'] = 'Sana';
 // $driver[0]['email'] = 'sana@example.com';
@@ -674,6 +674,7 @@ foreach ($pages as $key => $value) {
 // $driver[2]['phone'] = '333-333-1236';
 // $driver[2]['country'] = 'India';
 
+// echo '<pre>';
 // print_r(columnFilter($driver, 'name'));
 
 
@@ -683,14 +684,17 @@ foreach ($pages as $key => $value) {
 //     'Adidas 1',
 //     'Adidas 20',
 //     'Adidas 3',
+//     'Adidas 44',
+//     'Adidas 0',
 //     'Adidas 4'
 // ];
 
-// sort($soccerBoot, SORT_NATURAL | SORT_FLAG_CASE);
+// natcasesort($soccerBoot);
 // foreach ($soccerBoot as $key => $value) {
+//     echo '<pre>';
 //     echo 'soccerBoots[' . $key . '] = ' . $value;
-//     echo '<br>';
 // }
+
 
 // Question 25 
 
@@ -1332,15 +1336,15 @@ foreach ($pages as $key => $value) {
 
 // Question 51
 
-$firstData = [
-    'c1' => 'Red',
-    'c2' => 'Green',
-    'c3' => 'White',
-    'c4' => 'Black'
-];
+// $firstData = [
+//     'c1' => 'Red',
+//     'c2' => 'Green',
+//     'c3' => 'White',
+//     'c4' => 'Black'
+// ];
 
-$secondData = ['c2', 'c4'];
+// $secondData = ['c2', 'c4'];
 
-$outcome = array_diff_key($firstData, array_flip($secondData));
+// $outcome = array_diff_key($firstData, array_flip($secondData));
 
-print_r($outcome);
+// print_r($outcome);
