@@ -830,12 +830,13 @@
 //         foreach ($letters as $y => $values) {
 //             $positions++;
 //             if ($positions <= $length)
-//                 $inputRange[] = ($positions > 26 ? $inputRange[$x - 1] : '') . $values;
+//                 $inputRange[] = ($positions > 26 ? $inputRange[$x - 1] : "") . $values;
 //         }
 //     }
 //     return $inputRange;
 // }
-// print_r(letterRange(7));
+// echo '<pre>';
+// print_r(letterRange(27));
 
 
 // Question 31 
@@ -857,10 +858,7 @@
 
 // function fileExtension($data)
 // {
-//     $data = implode(
-//         '',
-//         explode('\\', $data)
-//     );
+//     $data = implode('', explode(',', $data));
 //     $data = explode('.', $data);
 //     $data = strtolower(end($data));
 //     return $data;
