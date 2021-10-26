@@ -1414,6 +1414,23 @@
 
 // Question 54 
 
+$removeWhiteSpaces = function ($x) {
+    $x = preg_match("#\S#", $x);
+    return $x;
+};
+
+$defaultArray = [15, null, ' ', -2, NULL, ' ', " \n", 'Red', 54, "\t"];
+
+echo '<pre>';
+
+print_r($defaultArray);
+
+$result = array_filter($defaultArray, $removeWhiteSpaces);
+
+echo '<pre>';
+
+print_r($result);
+
 
 
 // Question 55 
