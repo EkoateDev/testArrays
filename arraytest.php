@@ -884,6 +884,7 @@
 //     'MJ' => 'Jordan',
 //     'Adidas' => 'Pharrell',
 //     'Kanye' => 'Yeezy',
+//     'Vans' => 'Off the wall',
 // ];
 
 // arraysearch($testArray, 'Jordan');
@@ -900,7 +901,9 @@
 //     'driver10'
 // ];
 
-// asort($testArray, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
+// natcasesort($testArray);
+
+// echo '<pre>';
 // print_r($testArray);
 
 // Question 35 
@@ -985,7 +988,7 @@
 //     'Lewis'
 // ];
 
-// echo 'The Driver Lewis appears '
+// echo 'The Driver Lewis appeared '
 //     . valueCount($drivers, 'Lewis')
 //     . ' time(s) ';
 
@@ -1026,6 +1029,7 @@
 //     ]
 // ];
 
+// echo '<pre>';
 // print_r(uniqueArray($drivers, 'driverId'));
 
 
@@ -1112,6 +1116,7 @@
 
 // echo ' The emails which are not Unique are : ';
 // echo '<br>';
+// echo '<pre>';
 // print_r(arrayNotUnique($emailArray));
 
 
@@ -1344,4 +1349,75 @@
 
 // $outcome = array_diff_key($firstData, array_flip($secondData));
 
+// echo '<pre>';
 // print_r($outcome);
+
+
+// Question 52 
+
+// function arrayValueFilter($defaultArray, $order, $value)
+// {
+//     if (is_array($defaultArray) && count($defaultArray) > 0) {
+//         foreach (array_keys($defaultArray) as $key) {
+//             $x[$key] = $defaultArray[$key][$order];
+
+//             if ($x[$key] == $value) {
+//                 $newValues[$key] = $defaultArray[$key];
+//             }
+//         }
+//     }
+//     return $newValues;
+// }
+// $colors = [
+//     0 => [
+//         'order1' => 'Red',
+//         'order2' => 'Green',
+//         'order3' => 'Black'
+//     ],
+//     1 => [
+//         'order1' => 'Yellow',
+//         'order2' => 'White',
+//         'order3' => 'Pink'
+//     ]
+// ];
+
+// echo '<pre>';
+
+// $results = arrayValueFilter($colors, 'order1', 'Red');
+
+// print_r($results);
+
+
+// Question 53 
+
+// $food = [
+//     'Rice' => 'Fried',
+//     'Potatoes' => 'Mashed',
+//     'Chicken' => 'Grilled',
+//     'Soup' => 'Vegetable',
+// ];
+
+// $assignedValue = $food['Soup'];
+
+// echo '<pre>';
+
+// print_r($food);
+
+// $cleanValues = array_filter($food, function ($key) use ($assignedValue) {
+//     return ($key != $assignedValue);
+// });
+
+// echo '<pre>';
+
+// print_r($cleanValues);
+
+
+// Question 54 
+
+
+
+// Question 55 
+
+
+
+// Question 56 
