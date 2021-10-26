@@ -1414,27 +1414,81 @@
 
 // Question 54 
 
-$removeWhiteSpaces = function ($x) {
-    $x = preg_match("#\S#", $x);
-    return $x;
-};
+// $removeWhiteSpaces = function ($x) {
+//     $x = preg_match("#\S#", $x);
+//     return $x;
+// };
 
-$defaultArray = [15, null, ' ', -2, NULL, ' ', " \n", 'Red', 54, "\t"];
+// $defaultArray = [15, null, ' ', -2, NULL, ' ', " \n", 'Red', 54, "\t"];
 
-echo '<pre>';
+// echo '<pre>';
 
-print_r($defaultArray);
+// print_r($defaultArray);
 
-$result = array_filter($defaultArray, $removeWhiteSpaces);
+// $result = array_filter($defaultArray, $removeWhiteSpaces);
 
-echo '<pre>';
+// echo '<pre>';
 
-print_r($result);
-
+// print_r($result);
 
 
 // Question 55 
 
+// $testString = ' Thus, the most important characteristic of economic order prevailing in the world 
+// today is a wage system that deprives the workers of any right to the products being produced, 
+// be it for the society or for a private establishment
+
+// Why were not only women created . 
+
+// Sporting clubs represent the basic organization of traditional sport in the world today   ';
+
+// echo '<pre>';
+
+// $result = array_filter(array_map('trim', explode("\n", $testString)), 'strlen');
+// print_r($result);
 
 
 // Question 56 
+
+$a = array_fill(0, 4, array_fill(0, 4, 10));
+
+echo '<pre>';
+
+print_r($a);
+
+// Question 57
+
+function compareArrays($x, $y)
+{
+    if ($x === $y)
+        return 0;
+    return ($x > $y) ? 1 : -1;
+}
+function multiArray($array1, $array2)
+{
+    return array_diff_uassoc($array1['Usa'], $array2['Usa'], 'compareArrays');
+}
+
+$car1 = [
+    'Mercedes' => 'GTR', 'Ferrari' => 'LaFerrari', 'Usa' => ['Totota' => 'Camry', 'Bmw' => 'M5']
+];
+$car2 = [
+    'Mercedes' => 'GTR', 'Ferrari' => 'LaFerrari', 'Usa' => ['Microsoft' => 'Surfacebook', 'Bmw' => 'M5']
+];
+
+print_r(multiArray($car1, $car2));
+
+// function key_compare($a, $b)
+// {
+//     if ($a === $b)
+//         return 0;
+//     return ($a > $b) ? 1 : -1;
+// }
+// function multidimenssional_array_diff($arr1, $arr2)
+// {
+//     return array_diff_uassoc($arr1['c'], $arr2['c'], "key_compare");
+// }
+// //multidimenssional arrays
+// $color1 = array('a' => 'White', 'b' => 'Red', 'c' => array('a' => 'Green', 'b' => 'Blue', 'c' => 'Yellow'));
+// $color2 = array('a' => 'White', 'b' => 'Red', 'c' => array('a' => 'White', 'b' => 'Red', 'c' => 'Yellow'));
+// print_r(multidimenssional_array_diff($color1, $color2));
