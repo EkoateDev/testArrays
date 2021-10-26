@@ -702,7 +702,7 @@
 // {
 //     $total = count($defaultArray);
 //     for ($x = 0; $x < $total; $x++) {
-//         if ($defaultArray[$x][0] == ['&']) {
+//         if ($defaultArray[$x][0] == '&') {
 //             $defaultArray[$x] = $defaultArray[$x][1] . $defaultArray[$x];
 //         } else {
 //             $defaultArray[$x] = $defaultArray[$x][0] . $defaultArray[$x];
@@ -719,7 +719,7 @@
 
 
 
-// QUestion 26
+// Question 26
 
 // function shuffleArray($testArray)
 // {
@@ -746,6 +746,8 @@
 //     'Puma',
 //     'Fila'
 // ];
+
+// echo '<pre';
 // print_r(shuffleArray($shoeBrands));
 
 // Question 27 
